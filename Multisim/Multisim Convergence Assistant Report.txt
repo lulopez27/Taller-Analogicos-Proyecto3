@@ -1,0 +1,39 @@
+Multisim Convergence Assistant Summary Report
+ 
+ Convergence Assistant Summary Report
+
+Outcome:
+
+	The simulation error was corrected successfully.
+
+Changes Made:
+
+	-Initial Conditions was changed to Set To Zero
+
+
+
+Multisim Convergence Assistant Log 
+ 
+Step 1: Verifying Error Scenario
+	...completed.
+
+Step 2: Setting parameter Integration Method (METHOD) to Gear 
+	Simulating...
+	 ...completed. Simulation error still occurs.
+
+Step 3: Setting parameter Initial Conditions to Set To Zero 
+	Simulating...
+	 ...completed. Simulation error fixed.
+
+Step 4: Attempting rollback of Initial Conditions to Automatically Determine 
+	Simulating...
+	...Error recurred - rollback unsuccessful.
+
+Step 5: Restoring value of Initial Conditions to Set To Zero 
+
+Step 6: Attempting rollback of Integration Method (METHOD) to Trapezoidal 
+	Simulating...
+	...Rollback successful.
+
+Convergence Assistant completed successfully.
+ 
