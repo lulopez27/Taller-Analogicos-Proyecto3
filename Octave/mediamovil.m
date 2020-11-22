@@ -5,6 +5,7 @@ A = xlsread('bandstopSignal.xlsx');
 i = 0;
 j = 1;
 b = 2.5*10^-6;
+r = b;
 res = [0.00000000 0.0000000];
 a=0;
 while a < 0.1
@@ -22,9 +23,15 @@ while a < 0.1
     b = j*(2.5*10^-6);
   endif
 endwhile
-plot(res(1:100,1),res(1:100,2));
-[l w]=size(res)
+subplot(2,1,1);
+plot(res(:,1),res(:,2));
+axis ([0 r *5d000]);
+[l w]=size(res);
 res2 = [];
-for i= 1:l-4
-  res2(i) = res(i:i+5,1)/5;
+wind = 20000; %Ventana para aplicar el filtro
+for i= 1:l-wind
+  res2(i,:) = [res(i,1),sum(res(i:i+wind,2))/wind];
 endfor
+subplot(2,1,2);
+plot(res2(:,1),res2(:,2));
+axis ([0 r *5000]);
