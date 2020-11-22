@@ -25,10 +25,10 @@ while a < 0.1
 endwhile
 subplot(2,1,1);
 plot(res(:,1),res(:,2));
-axis ([0 r *5d000]);
+axis ([0 r *5000]);
 [l w]=size(res);
 res2 = [];
-wind = 20000; %Ventana para aplicar el filtro
+wind = 32; %Ventana para aplicar el filtro
 for i= 1:l-wind
   res2(i,:) = [res(i,1),sum(res(i:i+wind,2))/wind];
 endfor
