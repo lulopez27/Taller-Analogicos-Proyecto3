@@ -1,6 +1,7 @@
 clc; clear; close all;
 pkg load io;
-A = xlsread('bandstopSignal.xlsx');
+##A = xlsread('bandstopSignal_10,15,20kHz.xlsx');
+A = xlsread('bandstopSignal_10kHz.xlsx');
 [l w] = size(A);
 i = 0;
 j = 1;
@@ -28,7 +29,7 @@ plot(res(:,1),res(:,2));
 axis ([0 r *5000]);
 [l w]=size(res);
 res2 = [];
-wind = 32; %Ventana para aplicar el filtro
+wind = 31; %Ventana para aplicar el filtro
 for i= 1:l-wind
   res2(i,:) = [res(i,1),sum(res(i:i+wind,2))/wind];
 endfor
