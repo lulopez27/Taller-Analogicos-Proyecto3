@@ -1,7 +1,7 @@
 clc; clear; close all;
 pkg load io;
 ##A = xlsread('bandstopSignal_10,15,20kHz.xlsx');
-A = xlsread('bandstopSignal_10kHz.xlsx');
+A = xlsread('bandstopSignal_10,15,20kHz.xlsx');
 %tamanho de la matriz
 [l w] = size(A);
 i = 0;
